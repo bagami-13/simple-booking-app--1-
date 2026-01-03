@@ -1,24 +1,21 @@
 import React from 'react';
 
 const slots = [
-  { time: '10:00 AM - 11:00 AM', status: 'Available' },
-  { time: '11:00 AM - 12:00 PM', status: 'Available' },
-  { time: '1:00 PM - 2:00 PM', status: 'Available' },
-  { time: '3:00 PM - 4:00 PM', status: 'Available' },
+  { time: '10:00 AM - 11:00 AM' }, { time: '11:00 AM - 12:00 PM' },
+  { time: '1:00 PM - 2:00 PM' }, { time: '3:00 PM - 4:00 PM' }
 ];
 
 export default function Booking() {
   return (
-    <div style={{ padding: '40px', textAlign: 'center', backgroundColor: '#f5f3ff', minHeight: '100vh' }}>
-      <h2 style={{ fontSize: '2.5rem', color: '#1e293b' }}>Welcome to Bagami Booking</h2>
-      <p style={{ color: '#64748b', marginBottom: '40px' }}>Choose an available slot and book your time in seconds.</p>
-      
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', maxWidth: '1000px', margin: '0 auto' }}>
-        {slots.map((slot, index) => (
-          <div key={index} style={{ backgroundColor: 'white', padding: '30px', borderRadius: '20px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-            <h3 style={{ margin: '0 0 10px 0' }}>{slot.time}</h3>
-            <p style={{ color: '#10b981', fontWeight: 'bold' }}>{slot.status}</p>
-            <button style={{ marginTop: '15px', padding: '10px 20px', backgroundColor: '#8b5cf6', color: 'white', border: 'none', borderRadius: '10px', cursor: 'pointer' }}>
+    <div style={{ padding: '60px 20px', textAlign: 'center', backgroundColor: '#f8fafc', minHeight: '100vh' }}>
+      <h2 style={{ fontSize: '2.5rem', color: '#1e293b', marginBottom: '10px' }}>Welcome to Bagami Booking</h2>
+      <p style={{ color: '#64748b', marginBottom: '50px' }}>Choose an available slot and book your time in seconds.</p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', maxWidth: '1100px', margin: '0 auto' }}>
+        {slots.map((slot, i) => (
+          <div key={i} style={{ backgroundColor: 'white', padding: '40px', borderRadius: '24px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{slot.time}</h3>
+            <p style={{ color: '#10b981', fontWeight: '600' }}>Available</p>
+            <button style={{ marginTop: '20px', width: '100%', padding: '12px', backgroundColor: '#8b5cf6', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: 'bold' }}>
               Book Now
             </button>
           </div>
