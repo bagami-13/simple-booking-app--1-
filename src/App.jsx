@@ -7,11 +7,13 @@ import Booking from './pages/Booking';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Cover />} />
-        <Route path="/booking" element={<Booking />} />
-      </Routes>
+      <div className="min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Cover />} />
+          <Route path="/booking" element={<Booking />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
