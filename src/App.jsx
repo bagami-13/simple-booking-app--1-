@@ -1,12 +1,26 @@
 import React from 'react';
-// We use './cover' because your file is in the same folder as App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Cover from './cover';
+// Add any other pages you have here:
+// import About from './pages/About'; 
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Cover />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        <main>
+          <Routes>
+            {/* This is your main page */}
+            <Route path="/" element={<Cover />} />
+            
+            {/* Add more routes here as you build them */}
+            {/* <Route path="/about" element={<About />} /> */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
